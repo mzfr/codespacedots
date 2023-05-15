@@ -1,6 +1,5 @@
 # !/bin/bash
 
-
 #Install zsh
 sudo apt install zsh
 
@@ -22,7 +21,7 @@ sudo apt-get -f -y install
 # Install Neovim latest version
 sudo apt-get install ninja-build gettext cmake unzip curl
 git clone https://github.com/neovim/neovim
-cd neovim && git checkout stable &&make CMAKE_BUILD_TYPE=RelWithDebInfo
+cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
 sudo make install 
 
 #Install lunarvim
