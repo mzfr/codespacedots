@@ -6,9 +6,11 @@
 #sudo apt install zsh
 
 # Install Neovim latest version
-wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz
-tar -xvf nvim-linux64.tar.gz
-sudo mv ./nvim-linux64/bin/nvim /home/gitpod/.local/bin
+sudo apt-get install ninja-build gettext cmake unzip curl
+git clone https://github.com/neovim/neovim
+git checkout stable
+cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
+sudo make install 
 
 #Install lunarvim
 LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
