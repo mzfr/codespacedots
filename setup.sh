@@ -14,6 +14,11 @@ rm LICENSE README.md
 mkdir -p ~/.local/share/fonts
 cd ~/.local/share/fonts && curl -fLO https://github.com/ryanoasis/nerd-fonts/raw/0fc23725fb88e27c01cfd1540bd6151de9ee528d/patched-fonts/FiraCode/Regular/FiraCodeNerdFontMono-Regular.ttf
 
+# Install wkhtmltopdf
+wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-2/wkhtmltox_0.12.6.1-2.jammy_amd64.deb
+sudo dpkg -i wkhtmltox_0.12.6.1-2.jammy_amd64.deb
+sudo apt-get -f -y install
+
 # Install Neovim latest version
 sudo apt-get install ninja-build gettext cmake unzip curl
 git clone https://github.com/neovim/neovim
