@@ -19,7 +19,7 @@ sudo dpkg -i wkhtmltox_0.12.6.1-2.jammy_amd64.deb
 sudo apt-get -f -y install
 
 # Install Neovim latest version
-sudo apt-get install ninja-build gettext cmake unzip curl
+sudo apt-get install -y ninja-build gettext cmake unzip curl
 git clone https://github.com/neovim/neovim
 cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
 sudo make install 
