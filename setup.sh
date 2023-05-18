@@ -13,7 +13,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 # Setup dotfiles
 wget https://gitlab.com/0xmzfr/mydots/-/raw/main/.p10k.zsh
-wget https://gitlab.com/0xmzfr/mydots/-/raw/main/.zshrc ~/.zshrc
+rm .zshrc && wget https://gitlab.com/0xmzfr/mydots/-/raw/main/.zshrc ~/.zshrc
 wget https://gitlab.com/0xmzfr/mydots/-/raw/main/aliases.git.zsh -O ~/.oh-my-zsh/custom/aliases.git.zsh
 
 # Install powerlevel10k
