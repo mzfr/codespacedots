@@ -19,6 +19,10 @@ sudo apt-get -f -y install
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-
+# Setup dotfiles
+rm ~/.zshrc
 wget https://gitlab.com/0xmzfr/mydots/-/raw/main/.zshrc ~/.zshrc
 wget https://gitlab.com/0xmzfr/mydots/-/raw/main/aliases.git.zsh -O ~/.oh-my-zsh/custom/aliases.git.zsh
+
+# Cleanup
+rm lazygit_0.38.2_Linux_x86_64.tar.gz  wkhtmltox_0.12.6.1-2.jammy_amd64.deb
