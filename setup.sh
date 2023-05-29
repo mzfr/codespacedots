@@ -3,7 +3,17 @@
 #Install zsh
 sudo apt install zsh
 
-#Install lazygit
+# Install helix with themes and config
+wget https://github.com/helix-editor/helix/releases/download/23.05/helix-23.05-x86_64-linux.tar.xz
+tar -xvf helix-23.05-x86_64-linux.tar.xz
+cd helix-23.05-x86_64-linux && sudo cp hx /usr/local/bin && cp -r runtime/themes/ ~/.config/helix
+
+# Install pyright and get helix config files
+npm install --location=global pyright
+wget https://gitlab.com/0xmzfr/mydots/-/raw/main/config.toml -O ~/.config/helix/
+wget https://gitlab.com/0xmzfr/mydots/-/raw/main/languages.toml -O ~/.config/helix/
+
+# Install lazygit
 wget https://github.com/jesseduffield/lazygit/releases/download/v0.38.2/lazygit_0.38.2_Linux_x86_64.tar.gz
 tar -xvf lazygit_0.38.2_Linux_x86_64.tar.gz
 sudo mv lazygit /usr/local/bin

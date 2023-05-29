@@ -1,0 +1,9 @@
+[[languages]]
+name = "ruby"
+auto-format = true
+language-server = { command = "solargraph" }
+
+name = "python"
+roots = ["pyproject.toml"]
+language-server = { command = "pyright-langserver", args = ["--stdio"] }
+config = {} # <- this is the important line

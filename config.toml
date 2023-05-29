@@ -1,0 +1,29 @@
+theme = "onedark"
+
+[editor]
+cursorline = true
+true-color = true
+color-modes = true
+bufferline = "always"
+
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name", "file-type", "total-line-numbers", "file-encoding"]
+center = []
+right = ["selections", "primary-selection-length", "position", "position-percentage", "spacer", "diagnostics", "workspace-diagnostics", "version-control"]
+
+[editor.file-picker]
+hidden = false
+
+[keys.normal]
+C-s = ":w"
+Y = ":clipboard-yank"
+"A-left" = ":buffer-previous"
+"A-right" = ":buffer-next"
+C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+space.c = ":buffer-close!"
+
+
+[keys.select]
+Y = ":clipboard-yank"
