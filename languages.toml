@@ -1,9 +1,9 @@
-[[languages]]
+[[language]]
 name = "ruby"
 auto-format = true
 language-server = { command = "solargraph" }
 
-[[languages]]
+[[language]]
 name = "python"
 file-types = ["py", "pyi"]
 roots = ["pyproject.toml", "manage.py"]
