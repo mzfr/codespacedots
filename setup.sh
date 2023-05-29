@@ -4,9 +4,9 @@
 sudo apt install zsh
 
 # Install helix with themes and config
-wget https://github.com/helix-editor/helix/releases/download/23.05/helix-23.05-x86_64-linux.tar.xz
-tar -xvf helix-23.05-x86_64-linux.tar.xz
-cd helix-23.05-x86_64-linux && sudo cp hx /usr/local/bin && mkdir ~/.config/helix && mkdir ~/.config/helix/themes/ && cp -r runtime/themes/ ~/.config/helix/themes/default
+wget https://github.com/helix-editor/helix/releases/download/23.05/helix-23.03-x86_64-linux.tar.xz
+tar -xvf helix-23.03-x86_64-linux.tar.xz
+cd helix-23.03-x86_64-linux && sudo cp hx /usr/local/bin && mkdir ~/.config/helix && mkdir ~/.config/helix/themes/ && cp -r runtime/themes/ ~/.config/helix/themes/default
 
 # Install pyright and get helix config files
 npm install --location=global pyright
@@ -22,6 +22,7 @@ sudo mv lazygit /usr/local/bin
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Setup dotfiles
+cd ~
 wget https://gitlab.com/0xmzfr/mydots/-/raw/main/.p10k.zsh
 rm .zshrc && wget https://gitlab.com/0xmzfr/mydots/-/raw/main/.zshrc ~/.zshrc
 wget https://gitlab.com/0xmzfr/mydots/-/raw/main/aliases.git.zsh -O ~/.oh-my-zsh/custom/aliases.git.zsh
