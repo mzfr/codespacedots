@@ -4,9 +4,13 @@
 sudo apt install zsh
 
 # Install helix with themes and config
-wget https://github.com/helix-editor/helix/releases/download/23.03/helix-23.03-x86_64-linux.tar.xz
-tar -xvf helix-23.03-x86_64-linux.tar.xz
-cd helix-23.03-x86_64-linux && sudo cp hx /usr/local/bin && mkdir ~/.config/helix && mkdir ~/.config/helix/themes/ && cp -r runtime/themes/ ~/.config/helix/themes/default
+sudo add-apt-repository --yes ppa:maveonair/helix-editor
+sudo apt update
+sudo apt install helix 
+
+# Insall helix theme 
+mkdir ~/.config/helix && mkdir ~/.config/helix/themes
+wget https://gitlab.com/0xmzfr/mydots/-/raw/main/onedark.toml -O ~/.config/helix/themes/onedark.toml
 
 # Install pyright and get helix config files
 npm install --location=global pyright
