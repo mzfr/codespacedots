@@ -3,7 +3,10 @@ name = "ruby"
 auto-format = true
 language-server = { command = "solargraph" }
 
+[[languages]]
 name = "python"
-roots = ["pyproject.toml"]
+file-types = ["py", "pyi"]
+roots = ["pyproject.toml", "manage.py"]
 language-server = { command = "pyright-langserver", args = ["--stdio"] }
-config = {} # <- this is the important line
+formatter = { command = "black", args = ["-", "-q"] }
+auto-format = true
