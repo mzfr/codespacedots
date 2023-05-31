@@ -33,7 +33,7 @@ sudo mv ./lf /usr/local/bin
 sudo apt install -y bat
 mkdir ~/.config/lf
 wget https://gitlab.com/0xmzfr/mydots/-/raw/main/lfrc -O ~/.config/lf/lfrc
-wget https://gitlab.com/0xmzfr/mydots/-/raw/main/batter ~/.config/lf/batter
+wget https://gitlab.com/0xmzfr/mydots/-/raw/main/batter -O ~/.config/lf/batter
 
 
 # Install ohmyzsh and powerlevel10k theme
