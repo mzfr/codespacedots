@@ -25,10 +25,16 @@ wget https://github.com/jesseduffield/lazygit/releases/download/v0.38.2/lazygit_
 tar -xvf lazygit_0.38.2_Linux_x86_64.tar.gz
 sudo mv lazygit /usr/local/bin
 
-# Install lf
+# Install lf & it's config
 wget https://github.com/gokcehan/lf/releases/download/r30/lf-linux-amd64.tar.gz
 tar -xvf lf-linux-amd64.tar.gz
 sudo mv ./lf /usr/local/bin
+
+sudo apt install -y bat
+mkdir ~/.config/lf
+wget https://gitlab.com/0xmzfr/mydots/-/raw/main/lfrc -O ~/.config/lf/lfrc
+wget https://gitlab.com/0xmzfr/mydots/-/raw/main/batter ~/.config/lf/batter
+
 
 # Install ohmyzsh and powerlevel10k theme
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
