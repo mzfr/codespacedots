@@ -1,4 +1,4 @@
-theme = "onedark"
+theme = "adwaita-dark"
 
 [editor]
 cursorline = true
@@ -23,7 +23,3 @@ Y = ":clipboard-yank"
 C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 space.c = ":buffer-close!"
-
-
-[keys.select]
-Y = ":clipboard-yank"
