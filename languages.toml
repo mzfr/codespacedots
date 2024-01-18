@@ -1,12 +1,32 @@
-[[language]]
-name = "ruby"
-auto-format = true
-language-server = { command = "solargraph" }
+[language-server.pyright-langserver]
+command = "pyright-langserver"
+args = ["--stdio"]
+config.hostInfo = "helix"
 
 [[language]]
 name = "python"
 file-types = ["py", "pyi"]
-roots = ["pyproject.toml", "manage.py"]
-language-server = { command = "pyright-langserver", args = ["--stdio"] }
+language-servers = ["pyright-langserver"]
 formatter = { command = "black", args = ["-", "-q"] }
 auto-format = true
+
+[language-server.typescript-language-server]
+command = "typescript-language-server"
+
+[[language]]
+name = "javascript"
+language-servers = ["typescript-language-server"]
+formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+indent = { tab-width = 4, unit = "\t" }
+auto-format = true
+
+
+[[language]]
+name = "markdown"
+language-servers = [{ name = "ltex"}]
+file-types = ["md", "txt"]
+scope = "text.markdown"
+roots = []
+
+[language-server.ltex]
+command = "/opt/homebrew/bin/ltex-ls"
