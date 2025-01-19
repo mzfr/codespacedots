@@ -10,7 +10,7 @@ sudo apt install helix
 
 # Insall helix theme 
 mkdir ~/.config/helix && mkdir ~/.config/helix/themes
-wget https://gitlab.com/0xmzfr/mydots/-/raw/main/onedark.toml -O ~/.config/helix/themes/onedark.toml
+wget https://gitlab.com/0xmzfr/mydots/-/raw/main/myayudark.toml -O ~/.config/helix/themes/myayudark.toml
 
 # Install LSP's
 npm install --location=global pyright
@@ -49,4 +49,4 @@ wget https://gitlab.com/0xmzfr/mydots/-/raw/main/aliases.git.zsh -O ~/.oh-my-zsh
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 # Cleanup
-rm lazygit_0.38.2_Linux_x86_64.tar.gz  wkhtmltox_0.12.6.1-2.jammy_amd64.deb LICENSE README.md
+rm lazygit_0.38.2_Linux_x86_64.tar.gz LICENSE README.md
